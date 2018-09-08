@@ -4,7 +4,13 @@
   "description": "",
   "main": "",
   "scripts": {
-    "start": "node ./server.js"
+    "start": "node ./server.js",
+    "knex": "./node_modules/.bin/knex",
+    "seed:run": "npm run knex seed:run",
+    "seed:make": "npm run knex seed:make",
+    "latest": "npm run knex migrate:latest",
+    "migrate": "npm run knex migrate:make",
+    "rollback": "npm run knex migrate:rollback"
   },
   "keywords": [],
   "author": "Waldemir Francisco <waldemirflj@gmail.com>",
@@ -14,7 +20,9 @@
     "express": "^4.16.3",
     "express-graphql": "^0.6.12",
     "graphql": "^14.0.0",
+    "knex": "^0.15.2",
     "moment": "^2.22.2",
+    "mysql": "^2.16.0",
     "node-fetch": "^2.2.0"
   }
 }
